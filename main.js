@@ -8,12 +8,6 @@ _uOF.citationElement = document.querySelector('citation');
 _uOF.quote = undefined;
 _uOF.citation = undefined;
 
-_uOF.quotes = [
-	['test', 'blah',],
-	['randome text string', 'by whomever'],
-	['slkfjsoifj203 j203fj 2093jr20 3jf02 h309wj 39fw0 39f2093fj w93fj0w93 j0w9j fw039jfw0 93jf0w9 3j0f9wj 39fjw 390fjw9', 'hhaha sptoifj']
-];
-
 _uOF.colorSwitcher = (color) => {
 	_uOF.bgColorChangers.forEach(x => x.style.backgroundColor = color);
 	_uOF.fillChanger.style.fill = color;
@@ -27,11 +21,6 @@ _uOF.colorChooser = () => {
 	} while(rgb.reduce((x,y) => x + y) > 550);
 	return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
 };
-
-// _uOF.getQuote = () => {
-// 	return _uOF.quotes[Math.floor(Math.random() * 3)];
-// 	return ['test', 'test2'];
-// };
 
 _uOF.getQuote = (cb) => {
   const xhr = new XMLHttpRequest();
