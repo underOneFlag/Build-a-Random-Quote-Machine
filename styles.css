@@ -29,18 +29,17 @@ section {
     transition: color 2s;
 }
 
-blockquote {
+section > p {
+    display: inline;
     font-size: 28px;
 }
 
-blockquote::before {
-    content: "";
+svg {
     width: 25px;
     height: 25px;
-    background-image: url("quote-left.svg");
     display: inline-block;
-    background-size: cover;
-    margin-right: 10px;
+    margin-right: 5px;
+    transition: fill 2s;
 }
 
 citation {
